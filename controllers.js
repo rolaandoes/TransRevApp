@@ -1,5 +1,5 @@
-angular.module('reviewApp.controllers', ['$scope'])
+angular.module('reviewApp.controllers', [])
 .controller('MainCtrl', ['$scope', function($scope){
-	$scope.heading = "Uber, LYft, and Public Transports";
+	$scope.heading = "Airf-with a sexy side, Uber, LYft, and Public Transports";
+	$scope.reviews = 'This is how I feel about Uber'
 }])	
-console.log('are we working?')
