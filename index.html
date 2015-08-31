@@ -4,7 +4,7 @@
 	<meta charset = "utf-8">
 	<title>So many thoughts</title>
 	<!-- bootstrap css -->
-  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<!-- angular cdn -->
 	<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
 	<!-- angular route -->
@@ -21,12 +21,14 @@
 				<h2>Some reviews</h2>
 				<div class = 'col-md-12'>
 					{{reviews}}
-					<div class = 'submit'>
-					<h3>Submit a review</h3>
-					
 					</div>
 				</div>
 			</div>
+		</div>
+		<hr>
+		<div class = 'form-group'>
+			<input type = 'text' ng-model = 'post' class = 'form-control' placeholder = 'What are your thoughts on transportation?'>
+			<ng-submit>
 		</div>
 
 	</body>
