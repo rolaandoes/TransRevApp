@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="reviewApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+	<div class="container">
+		<div class="row" ng-repeat="reviews in reviews">
+			<div ng-href"{{review._id}}">
+				{{review.title}}
+			</div>
+		</div>
+	</div>
+</body>
+</html>
