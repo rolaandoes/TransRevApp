@@ -1,0 +1,39 @@
+{
+  "name": "clouds",
+  "version": "1.0.0",
+  "description": "cloud hosting review app",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "bcrypt": "^0.8.5",
+    "async": "^1.4.2",
+    "jwt-simple": "^0.3.1",
+    "cors": "^2.7.1",
+    "mongoose": "^4.1.5",
+    "moment": "^2.10.6",
+    "request": "^2.61.0",
+    "satellizer": "^0.12.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolaandoes/TransRevApp.git"
+  },
+  "keywords": [
+    "cloud",
+    "hosting-site",
+    "heroku",
+    "apcera"
+  ],
+  "author": "rolaandoes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rolaandoes/TransRevApp/issues"
+  },
+  "homepage": "https://github.com/rolaandoes/TransRevApp#readme"
+}

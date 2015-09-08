@@ -1,0 +1,26 @@
+<h1>We review {{heading}}</h1><br>
+<div class = 'container'>
+	<div class = 'row'>
+		<h2>Some reviews</h2>
+		<div class = 'col-md-12'>
+			{{reviews.title}}
+			{{reviews.link}}
+			{{reviews.body}}
+			{{reviews}}
+			</div>
+		</div>
+	</div>
+</div>
+<hr>
+<div class = 'form-group'>
+	<input type = 'text' ng-model = 'post' class = 'form-control' placeholder = 'What are your thoughts on transportation?'>
+	<ng-submit>
+</div>
+
+<!-- <div class="container">
+	<div class="row" ng-repeat="reviews in reviews">
+		<div ng-href"{{review._id}}">
+			{{review.title}}
+		</div>
+	</div>
+</div> -->

@@ -1,6 +1,6 @@
-var app = angular.module('reviewApp.controllers', []);
-app.controller('MainCtrl', ['$scope', function($scope){
-	$scope.heading = "Uber, LYft, and Public Transports";
+angular.module('reviewApp.controllers', [])
+.controller('MainCtrl', ['$scope', '$http', function($scope, $http){
+	$scope.heading = "Apcera, Heroku, and Pusher";
 	$scope.reviews = 'This is how I feel about Uber';
 	$scope.saveReview = function(Review){};
 }])	
@@ -8,7 +8,7 @@ app.controller('MainCtrl', ['$scope', function($scope){
 	$scope.authenticate = function(provider) {
 		$auth.authenticate(provider);
 	};
-});
+})
 // .controller('HomePageCtrl', ['$scope', function($scope){
 // 	if (!localStorage.reviews){
 // 		$scope.posts = [];
@@ -16,7 +16,7 @@ app.controller('MainCtrl', ['$scope', function($scope){
 // 		$scope.posts = JSON.parse(localStorage.reviews);
 // 	}
 // }]);
-// .controller('ReviewsCtrl', ['$scope', 'Review', function($scope, Review){
-// 	$scope.title = 'this is working';
-// 	$scope.reviews = Review.query();
-// }]);
+.controller('ReviewIndexCtrl', ['$scope', 'Review', function($scope, Review){
+	$scope.title = 'this is working';
+	$scope.reviews = Review.query();
+}]);
