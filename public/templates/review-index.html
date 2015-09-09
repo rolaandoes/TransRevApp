@@ -1,21 +1,67 @@
 <h1>We review {{heading}}</h1><br>
 <div class = 'container'>
+	<h2>Add New Review</h2>
+	<ul>
+		<a ng-click="promptReview()">Add a review</a>
+	</ul>
+	<div
+		bn-modals
+		ng-show="subview"
+		class="m-modals"
+		ng-switch="subview">
+		<!-- add review modal -->
+		<div
+			ng-swtich-when="prompt"
+			ng-controller="NewRevModalCtrl"
+			ng-submit="newReview()"
+			class="modal">
+			<p>
+			Title
+			  <div class="form-group">
+			    <input type="text" ng-model="newReview.title" class="form-control" placeholder="My review on Apcera" autofocus>
+			  </div>
+			</p>	
+			<p>
+				<a ng-click="newReview()">Submit</a>
+			</p>			
+		</div>
+
+	</div>
+
+		<form ng-submit="createReview()">
+			Title
+			  <div class="form-group">
+			    <input type="text" ng-model="newReview.title" class="form-control" placeholder="My review on Apcera" autofocus>
+			  </div>
+			Link to project
+			  <div class="form-group">
+			    <input type="text" ng-model="newReview.link" class="form-control" placeholder="https://app.apcera.com" autofocus>
+			  </div>
+			  Experience using the product <br>
+			  (what you used (aws, javascript, node.js) how the cloud app responded)
+			  <div class="form-group">
+			    <input type="text" ng-model="newReview.body" class="form-control" placeholder="I hated it because ..." autofocus>
+			  </div>
+			  Tag your posts with helpful hints to be found throughout our site!
+			  <div class="form-group">
+			    <input type="text" ng-model="newReview.tags" class="form-control" placeholder="apcera, awesome, heroku" autofocus>
+			  </div>
+			    <input type="submit" value="Save Review" class="btn btn-default">
+		</form>
+	<hr>
+</div>
+<div class = 'container'>
 	<div class = 'row'>
-		<h2>Some reviews</h2>
-		<div class = 'col-md-12'>
-			{{reviews.title}}
-			{{reviews.link}}
-			{{reviews.body}}
-			{{reviews}}
+		<div class = 'col-md-12' ng-repeat='review in reviews'>
+			{{review.title}}
+			{{review.link}}
+			{{review.body}}
+			{{review.tags}}
 			</div>
 		</div>
 	</div>
 </div>
 <hr>
-<div class = 'form-group'>
-	<input type = 'text' ng-model = 'post' class = 'form-control' placeholder = 'What are your thoughts on transportation?'>
-	<ng-submit>
-</div>
 
 <!-- <div class="container">
 	<div class="row" ng-repeat="reviews in reviews">

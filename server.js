@@ -52,6 +52,17 @@ app.post('/api/reviews', function (req, res) {
 	});
 });
 
+//delete review
+app.delete('/api/reviews/:id', function (req, res) {
+  // set the value of the id
+  var targetId = req.params.id;
+
+  // find question in db by id and remove
+  Review.findOneAndRemove({_id: targetId}, function (err, deletedReview) {
+    res.json(deletedReview);
+  });
+});
+
 // set location for static files
 app.use(express.static(__dirname + '/public'));
 
