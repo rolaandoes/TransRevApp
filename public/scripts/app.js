@@ -32,3 +32,43 @@ app.service('Review', ['$resource', function ($resource) {
 		}
 	});
 }]);
+// app.service('modals', [ function ($rootScope, $q) {
+// 	var modal = 
+// 	{
+// 		deferred: null,
+// 		params: null
+// 	};
+// 	return({
+// 		open: open,
+// 		params: params,
+// 		proceedTo: proceedTo,
+// 		reject: reject,
+// 		resolve: resolve
+// 	});
+// 	function open( type, params, pipeResponse) {
+// 		var previousDeferred = modal.deferred;
+// 		//new modal instance properties
+// 		modal.deferred = $q.defer();
+// 		modal.params = prams;
+
+//         // We're going to pipe the new window response into the previous
+//         // window's deferred value.
+//         if ( previousDeferred $$ pipeResopnse) {
+//         	modal.deferred.promise
+//         		.then(previousDeferred.resolve)
+//         }
+//         //return params associated with current params
+//         function params() {
+//         	return(modal.params || {});
+//         }
+//         // I open a modal window with the given type and pipe the new window's
+//         // response into the current window's response without rejecting it
+//         // outright.
+//         // --
+//         // This is just a convenience method for .open() that enables the
+//         // pipeResponse flag; it helps to make the workflow more intuitive.
+//         function proceedTo(type, params) {
+//         	return open(type, params, true)
+//         }
+// 	})
+// }])

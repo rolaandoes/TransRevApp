@@ -52,6 +52,23 @@ app.post('/api/reviews', function (req, res) {
 	});
 });
 
+// update review by replacing old question in db
+app.put('/api/reviews/:id', function (req, res) {
+  // set the value of the id
+  var targetId = req.params.id;
+
+  // find question in db by id
+  Review.findOne({_id: targetId}, function (err, foundReview) {
+    // update the question's text
+    foundReview.text = req.body.text;
+
+    // save updated question in db
+    foundReview.save(function (err, savedReview) {
+      res.json(savedReview);
+    });
+  });
+});
+
 //delete review
 app.delete('/api/reviews/:id', function (req, res) {
   // set the value of the id
